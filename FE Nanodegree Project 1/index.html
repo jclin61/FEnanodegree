@@ -10,21 +10,43 @@
      <title>FE Nanodegree Project 1</title>
 
     <!-- Bootstrap core CSS -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
   </head>
 
   <body>
-    <header>
-    <img src="profile_x1.png" alt="logo">
-    <h1>Jerry Lin</h1>
-    </header>
-    <main>
-    </main>
-    <section></section>
-    <footer></footer>
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <div class="container">
+      <header>   
+        <img src="profile_x1.png" srcset="profile_x2.png 2x" lt="logo">
+        <div class="name">
+          <h1>Jerry Lin</h1>
+          <p>Front-End Guru</p>
+        </div>
+      </header>
+      <main>
+        <img src="main.jpg" srcset="main_x2.png 2x" lt="main image">
+      </main>
+      <section>
+        <h1>Featured Work</h1>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="feature1.jpeg" alt="dashcam">
+            <h2>DASHCAMS TEST</h2>
+            <a href="#"><p>https://www.dashcamstest-not-real.com</p></a>
+          </div>
+          <div class="col-md-4">
+            <img src="feature2.jpg" alt="rageface">
+            <h2>Rage Face Comics</h2>
+            <a href="#"><p>https://www.ragefacecomics-not-real.com</p></a>
+          </div>
+          <div class="col-md-4">
+            <img src="feature3.jpg" alt="angular">
+            <h2>Angular JS test</h2>
+            <a href="https://github.com/jerryclin/Angular"><p>https://github.com/jerryclin/Angular</p></a>
+          </div>   
+        </div>
+      </section>
+    </div>
   </body>
 </html>

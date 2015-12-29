@@ -1,0 +1,47 @@
+header {
+    height: 120px;
+    border-bottom: 5px solid #BCBBBB;
+    margin-bottom: 40px;
+}
+
+header img{
+
+    float: left;
+}
+
+header .name{
+    float: right;
+}
+
+.name h1{
+    font-family: verdana;
+    font-size: 40px;
+}
+
+.name p{
+    float:right;
+}
+
+main img{
+    width: 100%;
+}
+
+section h1{
+    color: #BCBBBB;
+    font-family: verdana;
+    font-size:36px;
+    margin-left: 5px;
+}
+
+.col-md-4{
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+
+.col-md-4 h2{
+    color: #744704;
+}
+.col-md-4 p{
+    color: #BCBBBB;
+}

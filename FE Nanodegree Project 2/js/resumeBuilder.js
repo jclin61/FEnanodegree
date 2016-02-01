@@ -62,14 +62,14 @@ var projects = {
         "description": "Resume built using javascript, html and css",
         "images": [
             "images/project_image.jpg",
-            "images/project_image2.jpg"
+            "images/project_image.jpg"
         ]
     }, {
         "title": "Rage Quit Game",
         "dates": "Jan 1st 2014",
         "description": "2D game built using javascript, html and css",
         "images": [
-            "images/project_image.jpg",
+            "images/project_image2.jpg",
             "images/project_image2.jpg"
         ]
     }]
@@ -82,10 +82,10 @@ bio.display = function(){
     if(Boolean(bio) === true){
         $("#header").prepend(formattedRole);
         $("#header").prepend(formattedName);
-        $("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
-        $("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
-        $("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
-        $("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
+        $("#topContacts, #footerContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+        $("#topContacts, #footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
+        $("#topContacts, #footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+        $("#topContacts, #footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
         $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
         $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcome_message)); 
         $("#header").append(HTMLskillsStart);
@@ -154,7 +154,6 @@ education.display = function() {
 
     for (course in education.onlineCourses){
         if (education.onlineCourses.hasOwnProperty(course)) {
-            $("#education").append(HTMLschoolStart);
             var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
             var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);    
             var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
@@ -173,5 +172,5 @@ function inName(name){
     return firstname + " " + secondname;
 }
 
-$("#name").append(internationalizeButton);
+$("#header").append(internationalizeButton);
 $("#mapDiv").append(googleMap);

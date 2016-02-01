@@ -168,6 +168,14 @@ span {
   text-align: center;
 }
 
+button{
+  float: right;
+  margin-top: 10px;
+  height:40px;
+  background-color: yellow;
+  padding:5px;
+}
+
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {

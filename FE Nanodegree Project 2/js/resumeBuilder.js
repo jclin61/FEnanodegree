@@ -87,18 +87,17 @@ bio.display = function(){
         $("#topContacts, #footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
         $("#topContacts, #footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
         $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
-        $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcome_message)); 
+        $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcome_message));
         $("#header").append(HTMLskillsStart);
         for (skill in bio.skills){
             $("#header").append(HTMLskills.replace("%data%", bio.skills[skill]));
         }
     }
-
-}
+};
 
 // work
 
-work.display = function(){
+work.display = function (){
     for (job in work.jobs){
         if (work.jobs.hasOwnProperty(job)) {
             $("#workExperience").append(HTMLworkStart);
@@ -113,7 +112,7 @@ work.display = function(){
             $(".work-entry:last").append(formattedEmployerTitle, formattedLocation, formattedDate, formattedDescription);
         }
     }
-}
+};
 
 // project
 
@@ -134,7 +133,7 @@ projects.display = function() {
             }
         }
     }
-}
+};
 
 
 
@@ -155,20 +154,19 @@ education.display = function() {
     for (course in education.onlineCourses){
         if (education.onlineCourses.hasOwnProperty(course)) {
             var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
-            var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);    
+            var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
             var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
             var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
             $(".education-entry:last").append(HTMLonlineClasses, formattedonlineTitle, formattedonlineSchool, formattedonlineDates, formattedonlineURL); 
         }
     }
-}
+};
 
 
 function inName(name){
     var name_array = name.split(" ");
     var firstname = name_array[0].charAt(0).toUpperCase() + name_array[0].slice(1).toLowerCase();
     var secondname = name_array[1].toUpperCase();
-    
     return firstname + " " + secondname;
 }
 
